@@ -310,26 +310,69 @@ header .nav-top li a:hover {
   color: rgba(33, 56, 66, 0.6); }
 
 .project-item {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  padding-bottom: 300px; }
+
+.project-item.right {
+  justify-content: flex-end; }
 
 .concept-photo {
-  width: 50%;
+  width: 90%;
   position: relative; }
+
+.project-item.right .concept-photo {
+  float: right; }
 
 .concept-description {
   position: absolute;
-  bottom: 0;
-  right: 0; }
+  bottom: -90px;
+  right: -70px; }
+
+.project-item.right .concept-description {
+  bottom: -90px;
+  left: -70px; }
 
 #projects .card {
   float: right;
   width: 60%;
-  background: white; }
+  background: white;
+  border-radius: 8px; }
+
+#projects .project-item.right .card {
+  float: left; }
 
 #projects .card img {
-  width: 140px; }
+  width: 125px; }
 
 #projects .card-container {
-  height: auto; }
+  height: auto;
+  padding: 30px 30px 0 30px;
+  border-radius: 8px; }
+
+#projects .card-container h3 {
+  font-size: 16px; }
+
+#projects .author {
+  justify-content: flex-start; }
+
+#projects .name-job {
+  top: 23px; }
+
+#projects .name h2 {
+  font-size: 16px; }
+
+#projects .job p {
+  font-size: 14px; }
+
+#projects .text-container {
+  width: 25%;
+  margin: 0 150px; }
+
+#projects .text-container p {
+  color: rgba(33, 56, 66, 0.6); }
+
+#projects .text-container a {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=main.css.map */
