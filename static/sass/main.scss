@@ -52,14 +52,16 @@ img {
 .container {
   width: 85%;
   margin: 0 auto;
+  height: 100vh;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  position: absolute;
+  padding: 20px 0;
+  width: 100%;
   left: 5.5%;
+  height: auto;
 }
 
 .triangle.first {
@@ -74,12 +76,112 @@ header .container {
 
 .logo {
   display: flex;
+  z-index: 6;
+}
+
+header .nav-top {
+  display: flex;
+  list-style-type: none;
+  font-size: 22px;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 100%;
+  z-index: 3;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+
+header .nav-top li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: color 0.1s linear;
+}
+
+header .nav-top li a:hover {
+  color: #f8c10c;
+}
+
+#check-burger {
+  display: none;
+}
+
+#check-burger:checked ~ .nav-top {
+  opacity: 1;
+}
+
+.burger img {
+  position: absolute;
+}
+
+.burger-span {
+  display: block;
+  cursor: pointer;
+  padding: 13px 9px;
+  position: relative;
+  z-index: 5;
+  border-radius: 50%;
+  box-shadow: inset 50px 50px white;
+}
+
+.burger-line {
+  width: 22px;
+  height: 2px;
+  background: black;
+  transition: 0.3s all;
+}
+
+.second {
+  position: absolute;
+}
+
+.first,
+.third {
+  margin-bottom: 4px;
+}
+
+#check-burger:checked ~ label .burger-span .burger-line.first {
+  display: none;
+}
+
+#check-burger:checked ~ label .burger-span .burger-line.second {
+  transform: rotate(45deg);
+  height: 2px;
+  position: relative;
+  top: 3px;
+}
+
+#check-burger:checked ~ label .burger-span .burger-line.third {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 1px;
+}
+
+#check-burger:checked ~ label .burger-span .burger-line.fourth {
+  display: none;
+}
+
+#check-burger:checked ~ label .burger-span {
+  padding: 16px 9px;
 }
 
 .banner-text {
-  position: relative;
-  width: 55%;
-  height: 100vh;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  width: 50%;
   color: white;
   display: flex;
   flex-direction: column;
