@@ -212,9 +212,10 @@ header .nav-top li a:hover {
 .text-container a {
   display: flex;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 40px;
   text-decoration: underline;
   text-decoration-color: #ffd723;
+  transition: all 0.5s;
 }
 
 .text-container:not(#main-banner .text-container) a {
@@ -448,4 +449,34 @@ header .nav-top li a:hover {
 
 #projects .text-container a {
   margin-top: 50px;
+}
+
+#proposal .container {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#proposal .container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  width: 60%;
+  color: rgba(77, 83, 60, 1);
+}
+
+#proposal .text-container {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+#proposal .text-container h3 {
+  font-size: 24px;
+}
+
+.proposal-item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
