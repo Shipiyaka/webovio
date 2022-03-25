@@ -4,7 +4,6 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: black;
   font-weight: 400; }
 
 html,
@@ -24,7 +23,8 @@ h3,
 h4,
 h5 {
   font-family: "Poppins", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: rgba(77, 83, 60, 0.9); }
 
 img {
   max-width: 100%;
@@ -35,8 +35,6 @@ img {
   margin: 0; }
 
 #main-banner {
-  height: 100vh;
-  width: 100%;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,6 +44,9 @@ img {
   width: 85%;
   margin: 0 auto;
   height: 100vh; }
+
+.container:not(#main-banner .container) {
+  display: flex; }
 
 header .container {
   display: flex;
@@ -149,39 +150,186 @@ header .nav-top li a:hover {
 #check-burger:checked ~ label .burger-span {
   padding: 16px 9px; }
 
-.banner-text {
+#main-banner .text-container {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   z-index: 2;
   width: 50%;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center; }
 
-.banner-text p {
+#main-banner .text-container > p,
+#main-banner .text-container > h1 {
+  color: white; }
+
+.text-container p {
   font-size: 14px; }
 
-.banner-text h1 {
+.text-container h1 {
   font-weight: bold;
   font-size: 60px;
   padding: 20px 0; }
 
-.banner-text a {
+.text-container:not(#main-banner .text-container) h1 {
+  font-size: 36px;
+  color: #4d533c; }
+
+.text-container a {
   display: flex;
   align-items: center;
   padding-top: 40px;
   text-decoration: underline;
   text-decoration-color: #ffd723; }
 
-.banner-text a p {
+.text-container:not(#main-banner .text-container) a {
+  text-decoration-color: #d4d6d4; }
+
+.text-container a p {
   font-weight: bold;
   color: #ffd723; }
 
-.banner-text a .triangle {
+.text-container:not(#main-banner .text-container) a p {
+  color: #d4d6d4; }
+
+.text-container a .triangle {
   border: 5px solid transparent;
   border-left: 5px solid #ffd723;
   width: 5px; }
+
+.text-container:not(#main-banner .text-container) a .triangle {
+  border-left: 5px solid #d4d6d4; }
+
+.text-container h6 {
+  font-size: 16px;
+  padding: 20px 0;
+  color: rgba(33, 56, 66, 0.6);
+  font-weight: 400; }
+
+.brands {
+  position: absolute;
+  transform: translate(0, -50%);
+  z-index: 2;
+  right: 0;
+  background: white;
+  padding: 40px 0;
+  width: 92.5%;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947); }
+
+.brands-container {
+  display: flex;
+  height: auto;
+  width: 90%;
+  margin: 0 auto; }
+
+.brands-container img {
+  width: 50%; }
+
+.brands-container img:not(:last-child) {
+  margin-right: 60px; }
+
+#about-us .container {
+  display: flex;
+  justify-content: space-evenly; }
+
+.text-container {
+  width: 40%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.card {
+  width: 35%; }
+
+.card-container {
+  padding: 20px;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.card-container h3 {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 200;
+  color: #4d533c; }
+
+.author {
+  display: flex;
+  justify-content: space-between; }
+
+.avatar {
+  width: 140px; }
+
+.name-job {
+  position: relative;
+  top: 27px;
+  right: 15px; }
+  @media only screen and (max-width: 992px) {
+    .name-job {
+      top: 0; } }
+
+.name-job h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #4d533c; }
+  @media only screen and (max-width: 992px) {
+    .name-job h2 {
+      font-size: 16px; } }
+
+.name-job p {
+  font-size: 16px;
+  color: #152934; }
+  @media only screen and (max-width: 992px) {
+    .name-job p {
+      font-size: 14px; } }
+
+.br .container {
+  height: 1px;
+  background: rgba(33, 56, 66, 0.1); }
+
+.heading-parag {
+  margin: 0 auto;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 0; }
+
+.heading-parag h1 {
+  font-size: 36px;
+  color: #4d533c;
+  font-weight: bold;
+  width: 40%; }
+
+.heading-parag p {
+  width: 45%;
+  color: rgba(33, 56, 66, 0.6); }
+
+.project-item {
+  width: 100%; }
+
+.concept-photo {
+  width: 50%;
+  position: relative; }
+
+.concept-description {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+#projects .card {
+  float: right;
+  width: 60%;
+  background: white; }
+
+#projects .card img {
+  width: 140px; }
+
+#projects .card-container {
+  height: auto; }
 
 /*# sourceMappingURL=main.css.map */
