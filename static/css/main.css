@@ -79,8 +79,7 @@ header .nav-top {
   position: absolute;
   right: 0;
   top: 0;
-  width: 100%;
-  max-width: 100%;
+  width: 0;
   text-align: center;
   justify-content: space-evenly;
   height: 100%;
@@ -88,7 +87,7 @@ header .nav-top {
   margin: 0;
   opacity: 0;
   overflow: hidden;
-  transition: 0.5s all; }
+  transition: 0.8s all; }
 
 header .nav-top li a {
   display: block;
@@ -103,7 +102,9 @@ header .nav-top li a:hover {
   display: none; }
 
 #check-burger:checked ~ .nav-top {
-  opacity: 1; }
+  opacity: 1;
+  width: 100%;
+  max-width: 100%; }
 
 .burger img {
   position: absolute; }
@@ -158,7 +159,8 @@ header .nav-top li a:hover {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: flex-start; }
 
 #main-banner .text-container > p,
 #main-banner .text-container > h1 {
@@ -184,23 +186,43 @@ header .nav-top li a:hover {
   text-decoration-color: #ffd723;
   transition: all 0.5s; }
 
+#main-banner .text-container a:hover {
+  text-decoration-color: #d4d6d4; }
+
+#main-banner .text-container a:hover p {
+  color: #d4d6d4; }
+
 .text-container:not(#main-banner .text-container) a {
   text-decoration-color: #d4d6d4; }
 
+.text-container:not(#main-banner .text-container) a:hover {
+  text-decoration-color: #ffd723; }
+
 .text-container a p {
   font-weight: bold;
-  color: #ffd723; }
+  color: #ffd723;
+  transition: all 0.5s; }
 
 .text-container:not(#main-banner .text-container) a p {
   color: #d4d6d4; }
+
+.text-container:not(#main-banner .text-container) a:hover p {
+  color: #ffd723; }
 
 .text-container a .triangle {
   border: 5px solid transparent;
   border-left: 5px solid #ffd723;
   width: 5px; }
 
+.text-container a:hover .triangle {
+  border-left: 5px solid #d4d6d4;
+  transition: all 0.5s; }
+
 .text-container:not(#main-banner .text-container) a .triangle {
   border-left: 5px solid #d4d6d4; }
+
+.text-container:not(#main-banner .text-container) a:hover .triangle {
+  border-left: 5px solid #ffd723; }
 
 .text-container h6 {
   font-size: 16px;
@@ -208,7 +230,7 @@ header .nav-top li a:hover {
   color: rgba(33, 56, 66, 0.6);
   font-weight: 400; }
 
-.brands {
+.hover-item {
   position: absolute;
   transform: translate(0, -50%);
   z-index: 2;
@@ -218,16 +240,16 @@ header .nav-top li a:hover {
   width: 92.5%;
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947); }
 
-.brands-container {
+.hover-item-container {
   display: flex;
   height: auto;
   width: 90%;
   margin: 0 auto; }
 
-.brands-container img {
+.hover-item-container img {
   width: 50%; }
 
-.brands-container img:not(:last-child) {
+.hover-item-container img:not(:last-child) {
   margin-right: 60px; }
 
 #about-us .container {
@@ -376,6 +398,9 @@ header .nav-top li a:hover {
 #projects .text-container a {
   margin-top: 50px; }
 
+#proposal {
+  position: relative; }
+
 #proposal .container {
   flex-direction: column;
   justify-content: center; }
@@ -400,5 +425,17 @@ header .nav-top li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+
+#proposal .hover-item {
+  left: 0;
+  margin-top: 200px; }
+
+#proposal .hover-item-container .text-container {
+  margin-top: 0;
+  flex-direction: column; }
+
+#proposal .hover-item-container .text-container h1 {
+  font-size: 60px;
+  width: 70%; }
 
 /*# sourceMappingURL=main.css.map */

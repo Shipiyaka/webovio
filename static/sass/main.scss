@@ -92,8 +92,7 @@ header .nav-top {
   position: absolute;
   right: 0;
   top: 0;
-  width: 100%;
-  max-width: 100%;
+  width: 0;
   text-align: center;
   justify-content: space-evenly;
   height: 100%;
@@ -101,7 +100,7 @@ header .nav-top {
   margin: 0;
   opacity: 0;
   overflow: hidden;
-  transition: 0.5s all;
+  transition: 0.8s all;
 }
 
 header .nav-top li a {
@@ -121,6 +120,8 @@ header .nav-top li a:hover {
 
 #check-burger:checked ~ .nav-top {
   opacity: 1;
+  width: 100%;
+  max-width: 100%;
 }
 
 .burger img {
@@ -187,6 +188,7 @@ header .nav-top li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 #main-banner .text-container > p,
@@ -218,17 +220,34 @@ header .nav-top li a:hover {
   transition: all 0.5s;
 }
 
+#main-banner .text-container a:hover {
+  text-decoration-color: rgba(212, 214, 212, 1);
+}
+
+#main-banner .text-container a:hover p {
+  color: rgba(212, 214, 212, 1);
+}
+
 .text-container:not(#main-banner .text-container) a {
   text-decoration-color: rgba(212, 214, 212, 1);
+}
+
+.text-container:not(#main-banner .text-container) a:hover {
+  text-decoration-color: #ffd723;
 }
 
 .text-container a p {
   font-weight: bold;
   color: #ffd723;
+  transition: all 0.5s;
 }
 
 .text-container:not(#main-banner .text-container) a p {
   color: rgba(212, 214, 212, 1);
+}
+
+.text-container:not(#main-banner .text-container) a:hover p {
+  color: #ffd723;
 }
 
 .text-container a .triangle {
@@ -237,8 +256,17 @@ header .nav-top li a:hover {
   width: 5px;
 }
 
+.text-container a:hover .triangle {
+  border-left: 5px solid rgba(212, 214, 212, 1);
+  transition: all 0.5s;
+}
+
 .text-container:not(#main-banner .text-container) a .triangle {
   border-left: 5px solid rgba(212, 214, 212, 1);
+}
+
+.text-container:not(#main-banner .text-container) a:hover .triangle {
+  border-left: 5px solid #ffd723;
 }
 
 .text-container h6 {
@@ -248,7 +276,7 @@ header .nav-top li a:hover {
   font-weight: 400;
 }
 
-.brands {
+.hover-item {
   position: absolute;
   transform: translate(0, -50%);
   z-index: 2;
@@ -259,18 +287,18 @@ header .nav-top li a:hover {
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
 }
 
-.brands-container {
+.hover-item-container {
   display: flex;
   height: auto;
   width: 90%;
   margin: 0 auto;
 }
 
-.brands-container img {
+.hover-item-container img {
   width: 50%;
 }
 
-.brands-container img:not(:last-child) {
+.hover-item-container img:not(:last-child) {
   margin-right: 60px;
 }
 
@@ -451,6 +479,10 @@ header .nav-top li a:hover {
   margin-top: 50px;
 }
 
+#proposal {
+  position: relative;
+}
+
 #proposal .container {
   flex-direction: column;
   justify-content: center;
@@ -480,3 +512,20 @@ header .nav-top li a:hover {
   flex-direction: column;
   justify-content: space-between;
 }
+
+#proposal .hover-item {
+  left: 0;
+  margin-top: 200px;
+}
+
+#proposal .hover-item-container .text-container {
+  margin-top: 0;
+  flex-direction: column;
+}
+
+#proposal .hover-item-container .text-container h1 {
+  font-size: 60px;
+  width: 70%;
+}
+
+// #info {}
