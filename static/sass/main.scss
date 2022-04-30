@@ -240,10 +240,11 @@ header .nav-top li a:hover {
   font-weight: bold;
   color: #ffd723;
   transition: all 0.5s;
+  text-transform: uppercase;
 }
 
 .text-container:not(#main-banner .text-container) a p {
-  color: rgba(212, 214, 212, 1);
+  color: rgb(58, 172, 58);
 }
 
 .text-container:not(#main-banner .text-container) a:hover p {
@@ -481,6 +482,7 @@ header .nav-top li a:hover {
 
 #proposal {
   position: relative;
+  height: 110vh;
 }
 
 #proposal .container {
@@ -515,7 +517,8 @@ header .nav-top li a:hover {
 
 #proposal .hover-item {
   left: 0;
-  margin-top: 200px;
+  bottom: 0;
+  transform: translate(0, 50%);
 }
 
 #proposal .hover-item-container .text-container {
@@ -528,4 +531,10 @@ header .nav-top li a:hover {
   width: 70%;
 }
 
-// #info {}
+#proposal .hover-item .hover-item-container .text-container a p {
+  text-transform: uppercase;
+}
+
+#info {
+  background: #4f553d;
+}
