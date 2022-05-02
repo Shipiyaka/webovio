@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webovio</title>
-    <link rel="stylesheet" href="./static/css/main.css" />
+    <link rel="stylesheet" href="static/css/normilize.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,28 +16,14 @@
   <body>
     <main>
       <section id="hero">
-        <div class="container">
+        <div class="hero-container container">
           <header class="header">
             <div class="container">
-              <div class="logo">
-                <div class="triangle-logo first">
-                  <img
-                    src="./static/images/triangle-1.png"
-                    alt="Part of the logo"
-                  />
-                </div>
-                <div class="triangle-logo second">
-                  <img
-                    src="./static/images/triangle-2.png"
-                    alt="Part of the logo"
-                  />
-                </div>
-                <div class="text-logo">
-                  <img src="./static/images/webovio.png" alt="Webovio Logo" />
-                  <img src="./static/images/coma.png" alt="" />
-                </div>
-              </div>
-              <div class="burger">
+              <a href="#" class="logo">
+                <img src="static/images/logo.svg" alt="" />
+              </a>
+
+              <!-- <div class="burger">
                 <input type="checkbox" id="check-burger" autocomplete="off" />
                 <label for="check-burger">
                   <span class="burger-span">
@@ -52,7 +39,13 @@
                   <li><a href="#proposal">What we propose</a></li>
                   <li><a href="#get-started">Let's get started</a></li>
                 </ul>
-              </div>
+              </div> -->
+
+              <button class="burger btn-reset" aria-label="Open menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </button>
             </div>
           </header>
           <div class="hero-content text-container">
@@ -74,27 +67,27 @@
         <div class="hover-item">
           <div class="hover-item-container">
             <img
-              src="./static/images/logo-1.png"
+              src="static/images/logo-1.png"
               alt="Our client"
               class="hover-item-img"
             />
             <img
-              src="./static/images/logo-2.png"
+              src="static/images/logo-2.png"
               alt="Our client"
               class="hover-item-img"
             />
             <img
-              src="./static/images/logo-3.png"
+              src="static/images/logo-3.png"
               alt="Our client"
               class="hover-item-img"
             />
             <img
-              src="./static/images/logo-4.png"
+              src="static/images/logo-4.png"
               alt="Our client"
               class="hover-item-img"
             />
             <img
-              src="./static/images/logo-5.png"
+              src="static/images/logo-5.png"
               alt="Our client"
               class="hover-item-img"
             />
@@ -129,7 +122,7 @@
               <div class="author">
                 <div class="avatar">
                   <img
-                    src="./static/images/avatar-1.png"
+                    src="static/images/avatar-1.png"
                     alt="Portrait of the author"
                   />
                 </div>
@@ -162,7 +155,7 @@
             <div class="concept">
               <div class="concept-photo">
                 <img
-                  src="./static/images/back-1.png"
+                  src="static/images/back-1.png"
                   alt="Picture of the concept"
                 />
                 <div class="concept-description">
@@ -177,7 +170,7 @@
                       <div class="author">
                         <div class="avatar">
                           <img
-                            src="./static/images/avatar-1.png"
+                            src="static/images/avatar-1.png"
                             alt="Portrait of the author"
                           />
                         </div>
@@ -235,7 +228,7 @@
             <div class="concept">
               <div class="concept-photo">
                 <img
-                  src="./static/images/back-2.png"
+                  src="static/images/back-2.png"
                   alt="Picture of the concept"
                 />
                 <div class="concept-description">
@@ -251,7 +244,7 @@
                       <div class="author">
                         <div class="avatar">
                           <img
-                            src="./static/images/avatar-1.png"
+                            src="static/images/avatar-1.png"
                             alt="Portrait of the author"
                           />
                         </div>
@@ -271,7 +264,7 @@
             <div class="concept">
               <div class="concept-photo">
                 <img
-                  src="./static/images/back-3.png"
+                  src="static/images/back-3.png"
                   alt="Picture of the concept"
                 />
                 <div class="concept-description">
@@ -285,7 +278,7 @@
                       <div class="author">
                         <div class="avatar">
                           <img
-                            src="./static/images/avatar-1.png"
+                            src="static/images/avatar-1.png"
                             alt="Portrait of the author"
                           />
                         </div>
@@ -325,78 +318,207 @@
 
       <section id="proposal">
         <div class="container">
-          <h1>
+          <h1 class="title">
             Deation &amp;&nbsp;Evaluation&nbsp;&mdash; Best Way to&nbsp;Kick off
             Your Product Idea
           </h1>
-          <div class="text-container">
-            <div class="proposal-item">
-              <h3>Product Design Sprint</h3>
-              <p>
+          <ul class="proposal-text-container text-container list-reset">
+            <li class="proposal-item">
+              <h3 class="proposal-subtitle subtitle">Product Design Sprint</h3>
+              <p class="proposal-description description">
                 A&nbsp;five-day workshop that will help you answer crucial
                 business questions
               </p>
-              <a href="#">
+              <a href="#" class="link">
                 <div class="triangle"></div>
-                <p>Read more</p>
+                <p class="link-text">Read more</p>
               </a>
-            </div>
-            <div class="proposal-item">
-              <h3>Scoping Session</h3>
-              <p>
+            </li>
+            <li class="proposal-item">
+              <h3 class="proposal-subtitle subtitle">Scoping Session</h3>
+              <p class="proposal-description description">
                 A&nbsp;workshop aimed at&nbsp;shaping your business idea,
                 answering questions regarding project planning
               </p>
-              <a href="#">
+              <a href="#" class="link">
                 <div class="triangle"></div>
-                <p>Read more</p>
+                <p class="link-text">Read more</p>
               </a>
-            </div>
-            <div class="proposal-item">
+            </li>
+            <li class="proposal-item">
               <div class="proposal-item-header">
-                <h3>UX</h3>
-                <h3>Review</h3>
+                <h3 class="proposal-subtitle subtitle">UX Review</h3>
               </div>
-              <p>
+              <p class="proposal-description description">
                 An&nbsp;evaluation which will help you radically improve your
                 product.
               </p>
-              <a href="#">
+              <a href="#" class="link">
                 <div class="triangle"></div>
-                <p>Read more</p>
+                <p class="link-text">Read more</p>
               </a>
-            </div>
-            <div class="proposal-item">
-              <h3>Code</h3>
-              <h3>Review</h3>
-              <p>
+            </li>
+            <li class="proposal-item">
+              <h3 class="proposal-subtitle subtitle">Code Review</h3>
+              <p class="proposal-description description">
                 Do&nbsp;you know what one of&nbsp;the key secrets
                 of&nbsp;success is&nbsp;what makes people successful
                 in&nbsp;business
               </p>
-              <a href="#">
+              <a href="#" class="link">
                 <div class="triangle"></div>
-                <p>Read more</p>
+                <p class="link-text">Read more</p>
               </a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
-        `
         <div class="hover-item">
           <div class="hover-item-container">
             <div class="text-container">
-              <h1>Let&rsquo;s make something amazing together.</h1>
-              <a href="#">
+              <h1 class="hover-item-title title">
+                Let&rsquo;s make something amazing together.
+              </h1>
+              <a href="#" class="link">
                 <div class="triangle"></div>
-                <p class="upper">Let&rsquo;s get started</p>
+                <p class="upper link-text">Let&rsquo;s get started</p>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="info"><div class="container"></div></section>
+      <footer class="footer">
+        <div class="footer-container container">
+          <div class="footer-top">
+            <div class="footer-contacts-item">
+              <p class="footer-contacts-text">Phone</p>
+              <a href="tel:+3250312832" class="footer-contacts-info"
+                >+32 50 31 28 32</a
+              >
+            </div>
+            <div class="footer-contacts-item">
+              <p class="footer-contacts-text">Address</p>
+              <address class="footer-contacts-info">
+                491 Merlin Crest Suite 963
+              </address>
+            </div>
+          </div>
+
+          <div class="footer-middle">
+            <div class="footer-column">
+              <div class="footer-subtitle">Services</div>
+              <ul class="footer-list list-reset">
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Strategy Design</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Product Design</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Content Strategy</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Brand Strategy</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Development</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-subtitle">Help And Advice</div>
+              <ul class="footer-list list-reset">
+                <li class="footer-item">
+                  <a href="#" class="footer-link">How it&nbsp;works</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Contact Support</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Privacy Policy</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">FAQ</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-subtitle">Company</div>
+              <ul class="footer-list list-reset">
+                <li class="footer-item">
+                  <a href="#" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Blog</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Contact</a>
+                </li>
+                <li class="footer-item">
+                  <a href="#" class="footer-link">Jobs</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-subtitle">Get in touch</div>
+              <div class="footer-text">
+                Feel free to get in touch with us vai email
+              </div>
+              <a href="mailto:info.webovio@gmail.com" class="footer-mail"
+                >info.webovio@gmail.com</a
+              >
+              <ul class="social list-reset">
+                <li class="social-item">
+                  <a
+                    href="#"
+                    class="social-link social-link-fb"
+                    target="_blank"
+                    aria-label="Facebook"
+                  ></a>
+                </li>
+                <li class="social-item">
+                  <a
+                    href="#"
+                    class="social-link social-link-tw"
+                    target="_blank"
+                    aria-label="Twitter"
+                  ></a>
+                </li>
+                <li class="social-item">
+                  <a
+                    href="#"
+                    class="social-link social-link-gp"
+                    target="_blank"
+                    aria-label="Google Plus"
+                  ></a>
+                </li>
+                <li class="social-item">
+                  <a
+                    href="#"
+                    class="social-link social-link-li"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <a href="#" class="logo">
+              <img src="static/images/logo.svg" alt="" />
+            </a>
+
+            <small class="copyright"
+              >&copy;&nbsp;2020@webovio. All Rights Reserved.</small
+            >
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

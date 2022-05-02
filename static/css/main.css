@@ -1,8 +1,12 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+}
+
 body {
   font-size: 16px;
   min-width: 320px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family);
   font-size: 16px;
   font-weight: 400;
 }
@@ -19,13 +23,26 @@ a {
   text-decoration: none;
 }
 
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-reset {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 p,
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   color: rgba(77, 83, 60, 0.9);
 }
@@ -36,33 +53,44 @@ img {
 }
 
 * {
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
+  /* padding: 0;
+  margin: 0; */
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 #hero {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
 }
 
 .container {
-  width: 85%;
+  max-width: 1140px;
+  padding: 0 15px;
   margin: 0 auto;
   height: 100vh;
 }
 
-.container:not(#hero .container) {
+.container {
   display: flex;
+}
+
+.hero-container {
+  display: block;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 24px 0;
   width: 100%;
-  left: 5.5%;
   height: auto;
 }
 
@@ -100,7 +128,7 @@ img {
   margin: 0;
   opacity: 0;
   overflow: hidden;
-  transition: 0.8s all;
+  transition: all 0.5s;
 }
 
 .header .nav-top li a {
@@ -114,7 +142,37 @@ img {
   color: #f8c10c;
 }
 
-#check-burger {
+.burger {
+  --padding-x: 11px;
+  --padding-y: 14px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: var(--padding-y) var(--padding-x);
+}
+
+.burger-line {
+  display: inline-block;
+  position: absolute;
+  top: var(--padding-y);
+  left: 50%;
+  background-color: #000;
+  width: calc(100% - (var(--padding-x) * 2));
+  height: 2px;
+  transform: translateX(-50%);
+}
+
+.burger-line:nth-child(2) {
+  top: calc(var(--padding-y) + 6px);
+}
+
+.burger-line:nth-child(3) {
+  top: calc(var(--padding-y) + 12px);
+}
+
+/* #check-burger {
   display: none;
 }
 
@@ -177,7 +235,7 @@ img {
 
 #check-burger:checked ~ label .burger-span {
   padding: 16px 9px;
-}
+} */
 
 .text-container {
   width: 40%;
@@ -185,6 +243,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .hero-content {
@@ -192,29 +251,33 @@ img {
   top: 50%;
   transform: translate(0, -50%);
   z-index: 2;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  max-width: 616px;
+  width: auto;
 }
 
 .title {
   font-size: 36px;
   font-weight: bold;
   color: #4d533c;
-  padding: 20px 0;
+  line-height: 46px;
+  margin: 0;
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: 60px;
+  line-height: 74px;
+}
+
+.subtitle {
+  line-height: 21px;
 }
 
 .description {
   font-size: 16px;
-  padding: 20px 0;
   color: rgba(33, 56, 66, 0.6);
   font-weight: 400;
+  line-height: 26px;
+  margin: 0;
 }
 
 .hero-subtitle,
@@ -228,13 +291,28 @@ img {
   font-size: 14px;
 }
 
+.hero-subtitle {
+  margin-bottom: 22px;
+}
+
+.hero-title {
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 16px;
+  margin-bottom: 45px;
+}
+
 .link {
   display: flex;
   align-items: center;
-  margin-top: 40px;
-  text-decoration: underline;
-  text-decoration-color: #d4d6d4;
+  text-decoration: none;
+  text-indent: 10px;
   transition: all 0.5s;
+  padding: 10px;
+  margin: -10px;
+  line-height: 1;
 }
 
 .hero-link {
@@ -253,6 +331,7 @@ img {
   font-weight: bold;
   color: #d4d6d4;
   transition: all 0.5s;
+  border-bottom: 1px solid currentColor;
 }
 
 .hero-link-text {
@@ -293,15 +372,15 @@ img {
   z-index: 2;
   right: 0;
   background: white;
-  padding: 40px 0;
-  width: 92.5%;
+  padding: 40px 30px;
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
 }
 
 .hover-item-container {
   display: flex;
   height: auto;
-  width: 90%;
+  max-width: 1276px;
+  width: 1140px;
   margin: 0 auto;
 }
 
@@ -331,11 +410,12 @@ img {
   justify-content: flex-end;
 }
 
-.card-container .card-container-text {
+.card-container-text {
   font-style: italic;
   font-size: 20px;
   font-weight: 200;
   color: #4d533c;
+  line-height: 40px;
 }
 
 .author {
@@ -363,7 +443,9 @@ img {
   font-weight: bold;
   font-size: 18px;
   color: #4d533c;
+  line-height: 33px;
 }
+
 @media only screen and (max-width: 992px) {
   .name {
     font-size: 16px;
@@ -373,7 +455,9 @@ img {
 .job {
   font-size: 16px;
   color: #152934;
+  line-height: 24px;
 }
+
 @media only screen and (max-width: 992px) {
   .job {
     font-size: 14px;
@@ -409,6 +493,7 @@ img {
 
 #projects .card-container-text {
   font-size: 16px;
+  line-height: 26px;
 }
 
 #projects .author {
@@ -449,11 +534,13 @@ img {
   color: #4d533c;
   width: 40%;
   padding: 0;
+  line-height: 54px;
 }
 
 .heading-parag-subtitle {
   width: 45%;
   color: rgba(33, 56, 66, 0.6);
+  line-height: 26px;
 }
 
 .project-item {
@@ -488,7 +575,7 @@ img {
 
 #proposal {
   position: relative;
-  height: 110vh;
+  height: 140vh;
 }
 
 #proposal .container {
@@ -496,29 +583,34 @@ img {
   justify-content: center;
 }
 
-#proposal .container h1 {
-  font-size: 36px;
-  font-weight: bold;
-  width: 60%;
-  color: #4d533c;
+#proposal .title {
+  max-width: 610px;
+  margin-bottom: 100px;
 }
 
-#proposal .text-container {
+.proposal-text-container {
   width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 100px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-#proposal .text-container h3 {
-  font-size: 24px;
-}
-
-.proposal-item {
+/* .proposal-item {
   width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+} */
+
+.proposal-subtitle {
+  font-size: 24px;
+  line-height: 34px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.proposal-description {
+  font-size: 14px;
 }
 
 #proposal .hover-item {
@@ -532,13 +624,24 @@ img {
   flex-direction: column;
 }
 
-#proposal .hover-item-container .text-container h1 {
+#proposal .hover-item-title {
   font-size: 60px;
   width: 70%;
+  line-height: 74px;
 }
 
-#info {
+.upper.link-text {
+  text-transform: uppercase;
+}
+
+.footer {
   background: #4f553d;
+  padding-top: 60vh;
+}
+
+.footer-container {
+  height: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
