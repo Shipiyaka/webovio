@@ -66,11 +66,11 @@ img {
   height: auto;
 }
 
-.triangle.first {
+.triangle-logo.first {
   z-index: 5;
 }
 
-.triangle.second {
+.triangle-logo.second {
   position: relative;
   left: -27px;
   z-index: 4;
@@ -201,7 +201,20 @@ img {
 
 .title {
   font-size: 36px;
+  font-weight: bold;
   color: #4d533c;
+  padding: 20px 0;
+}
+
+.hero-title {
+  font-size: 56px;
+}
+
+.description {
+  font-size: 16px;
+  padding: 20px 0;
+  color: rgba(33, 56, 66, 0.6);
+  font-weight: 400;
 }
 
 .hero-subtitle,
@@ -215,75 +228,63 @@ img {
   font-size: 14px;
 }
 
-.hero-title {
-  font-weight: bold;
-  font-size: 56px;
-  padding: 20px 0;
-}
-
-.text-container .link {
+.link {
   display: flex;
   align-items: center;
   margin-top: 40px;
   text-decoration: underline;
-  text-decoration-color: #ffd723;
+  text-decoration-color: #d4d6d4;
   transition: all 0.5s;
 }
 
-.hero-content a:hover {
-  text-decoration-color: #d4d6d4;
-}
-
-.hero-content a:hover p {
-  color: #d4d6d4;
-}
-
-.text-container:not(.hero-content) a {
-  text-decoration-color: #d4d6d4;
-}
-
-.text-container:not(.hero-content) a:hover {
+.hero-link {
   text-decoration-color: #ffd723;
 }
 
-.text-container .link .link-text {
+.link:hover {
+  text-decoration-color: #ffd723;
+}
+
+.hero-link:hover {
+  text-decoration-color: #d4d6d4;
+}
+
+.link-text {
   font-weight: bold;
-  color: #ffd723;
+  color: #d4d6d4;
   transition: all 0.5s;
 }
 
-.text-container:not(.hero-content) .link .link-text {
+.hero-link-text {
+  color: #ffd723;
+}
+
+.link:hover .link-text {
+  color: #ffd723;
+}
+
+.hero-link:hover .hero-link-text {
   color: #d4d6d4;
 }
 
-.text-container:not(.hero-content) .link:hover .link-text {
-  color: #ffd723;
-}
-
-.text-container a .triangle {
+.triangle {
   border: 5px solid transparent;
-  border-left: 5px solid #ffd723;
-  width: 5px;
-}
-
-.text-container a:hover .triangle {
   border-left: 5px solid #d4d6d4;
+  width: 5px;
   transition: all 0.5s;
 }
 
-.text-container:not(#hero .text-container) a .triangle {
-  border-left: 5px solid #d4d6d4;
-}
-
-.text-container:not(#hero .text-container) a:hover .triangle {
+.hero-triangle {
   border-left: 5px solid #ffd723;
 }
 
-.text-container h6 {
-  font-size: 16px;
-  padding: 20px 0;
-  color: rgba(33, 56, 66, 0.6);
-  font-weight: 400;
+.link:hover .triangle {
+  border-left: 5px solid #ffd723;
+  transition: all 0.5s;
+}
+
+.hero-link:hover .hero-triangle {
+  border-left: 5px solid #d4d6d4;
 }
 
 .hover-item {
@@ -304,11 +305,11 @@ img {
   margin: 0 auto;
 }
 
-.hover-item-container img {
+.hover-item-container .hover-item-img {
   width: 50%;
 }
 
-.hover-item-container img:not(:last-child) {
+.hover-item-container .hover-item-img:not(:last-child) {
   margin-right: 60px;
 }
 
@@ -330,7 +331,7 @@ img {
   justify-content: flex-end;
 }
 
-.card-container h3 {
+.card-container .card-container-text {
   font-style: italic;
   font-size: 20px;
   font-weight: 200;
@@ -351,29 +352,30 @@ img {
   top: 27px;
   right: 15px;
 }
+
 @media only screen and (max-width: 992px) {
   .name-job {
     top: 0;
   }
 }
 
-.name-job h2 {
+.name {
   font-weight: bold;
   font-size: 18px;
   color: #4d533c;
 }
 @media only screen and (max-width: 992px) {
-  .name-job h2 {
+  .name {
     font-size: 16px;
   }
 }
 
-.name-job p {
+.job {
   font-size: 16px;
   color: #152934;
 }
 @media only screen and (max-width: 992px) {
-  .name-job p {
+  .job {
     font-size: 14px;
   }
 }
@@ -381,6 +383,57 @@ img {
 .br .container {
   height: 1px;
   background: rgba(33, 56, 66, 0.1);
+}
+
+#projects .card {
+  float: right;
+  width: 60%;
+  background: white;
+  border-radius: 8px;
+}
+
+#projects .project-item.right .card {
+  float: left;
+}
+
+#projects .card img {
+  min-width: 125px;
+  max-width: 125px;
+}
+
+#projects .card-container {
+  height: auto;
+  padding: 30px 30px 0 30px;
+  border-radius: 8px;
+}
+
+#projects .card-container-text {
+  font-size: 16px;
+}
+
+#projects .author {
+  justify-content: flex-start;
+}
+
+#projects .name {
+  font-size: 16px;
+}
+
+#projects .job {
+  font-size: 14px;
+}
+
+#projects .text-container {
+  width: 25%;
+  margin: 0 150px;
+}
+
+#projects .subtitle {
+  color: rgba(33, 56, 66, 0.6);
+}
+
+#projects .link {
+  margin-top: 50px;
 }
 
 .heading-parag {
@@ -392,14 +445,13 @@ img {
   padding: 100px 0;
 }
 
-.heading-parag h1 {
-  font-size: 36px;
+.heading-parag-title {
   color: #4d533c;
-  font-weight: bold;
   width: 40%;
+  padding: 0;
 }
 
-.heading-parag p {
+.heading-parag-subtitle {
   width: 45%;
   color: rgba(33, 56, 66, 0.6);
 }
@@ -432,60 +484,6 @@ img {
 .project-item.right .concept-description {
   bottom: -90px;
   left: -70px;
-}
-
-#projects .card {
-  float: right;
-  width: 60%;
-  background: white;
-  border-radius: 8px;
-}
-
-#projects .project-item.right .card {
-  float: left;
-}
-
-#projects .card img {
-  width: 125px;
-}
-
-#projects .card-container {
-  height: auto;
-  padding: 30px 30px 0 30px;
-  border-radius: 8px;
-}
-
-#projects .card-container h3 {
-  font-size: 16px;
-}
-
-#projects .author {
-  justify-content: flex-start;
-}
-
-#projects .name-job {
-  top: 23px;
-}
-
-#projects .name h2 {
-  font-size: 16px;
-}
-
-#projects .job p {
-  font-size: 14px;
-}
-
-#projects .text-container {
-  width: 25%;
-  margin: 0 150px;
-}
-
-#projects .text-container p {
-  color: rgba(33, 56, 66, 0.6);
-}
-
-#projects .text-container a {
-  margin-top: 50px;
 }
 
 #proposal {
