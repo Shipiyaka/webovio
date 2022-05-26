@@ -12,6 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,200;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+      integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <main>
@@ -63,41 +77,41 @@
             </a>
           </div>
         </div>
-
-        <div class="hover-item">
-          <div class="hover-item-container">
-            <img
-              src="static/images/logo-1.png"
-              alt="Our client"
-              class="hover-item-img"
-            />
-            <img
-              src="static/images/logo-2.png"
-              alt="Our client"
-              class="hover-item-img"
-            />
-            <img
-              src="static/images/logo-3.png"
-              alt="Our client"
-              class="hover-item-img"
-            />
-            <img
-              src="static/images/logo-4.png"
-              alt="Our client"
-              class="hover-item-img"
-            />
-            <img
-              src="static/images/logo-5.png"
-              alt="Our client"
-              class="hover-item-img"
-            />
-          </div>
-        </div>
       </section>
+
+      <div class="hover-item hover-item-right">
+        <div class="hover-item-container">
+          <img
+            src="static/images/logo-1.png"
+            alt="Our client"
+            class="hover-item-img"
+          />
+          <img
+            src="static/images/logo-2.png"
+            alt="Our client"
+            class="hover-item-img"
+          />
+          <img
+            src="static/images/logo-3.png"
+            alt="Our client"
+            class="hover-item-img"
+          />
+          <img
+            src="static/images/logo-4.png"
+            alt="Our client"
+            class="hover-item-img"
+          />
+          <img
+            src="static/images/logo-5.png"
+            alt="Our client"
+            class="hover-item-img"
+          />
+        </div>
+      </div>
 
       <section id="about-us">
         <div class="container">
-          <div class="text-container">
+          <div class="about-us-text-container text-container">
             <p class="subtitle">What we&nbsp;do&nbsp;for you</p>
             <h1 class="title">
               Strategy. Design Content. Technology Development
@@ -113,7 +127,7 @@
             </a>
           </div>
           <div class="card">
-            <div class="card-container">
+            <div class="about-us-card-container card-container">
               <h3 class="card-container-text">
                 With More than 10&nbsp;Years of&nbsp;Knowledge and Expertise
                 we&nbsp;Design and Code Websites and Apps, We&nbsp;Build Brands
@@ -184,7 +198,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-container">
+            <div class="project-text-container text-container">
               <h1 class="title">The wall new Balenciaga.com</h1>
               <p class="subtitle">
                 This article is&nbsp;floated online with an&nbsp;aim
@@ -204,7 +218,7 @@
           </div>
 
           <div class="project-item right">
-            <div class="text-container">
+            <div class="project-text-container text-container">
               <h1 class="title">
                 Is&nbsp;this the future of&nbsp;3D&nbsp;model?
               </h1>
@@ -292,7 +306,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-container">
+            <div class="project-text-container text-container">
               <h1 class="title">
                 Is&nbsp;this the future of&nbsp;Online Booking
               </h1>
@@ -318,7 +332,7 @@
 
       <section id="proposal">
         <div class="container">
-          <h1 class="title">
+          <h1 class="proposal-title title">
             Deation &amp;&nbsp;Evaluation&nbsp;&mdash; Best Way to&nbsp;Kick off
             Your Product Idea
           </h1>
@@ -376,21 +390,21 @@
             </li>
           </ul>
         </div>
+      </section>
 
-        <div class="hover-item">
-          <div class="hover-item-container">
-            <div class="text-container">
-              <h1 class="hover-item-title title">
-                Let&rsquo;s make something amazing together.
-              </h1>
-              <a href="#" class="link">
-                <div class="triangle"></div>
-                <p class="upper link-text">Let&rsquo;s get started</p>
-              </a>
-            </div>
+      <div class="hover-item hover-item-left">
+        <div class="hover-item-container">
+          <div class="hover-item-text-container text-container">
+            <h1 class="hover-item-title title">
+              Let&rsquo;s make something amazing together.
+            </h1>
+            <a href="#" class="link">
+              <div class="triangle"></div>
+              <p class="upper link-text">Let&rsquo;s get started</p>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
 
       <footer class="footer">
         <div class="footer-container container">
@@ -482,7 +496,13 @@
                     class="social-link social-link-fb"
                     target="_blank"
                     aria-label="Facebook"
-                  ></a>
+                    ></i>
+
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa-brands fa-facebook-f fa-stack-1x"></i>
+                    </span>
+                  </a>
                 </li>
                 <li class="social-item">
                   <a
@@ -490,7 +510,12 @@
                     class="social-link social-link-tw"
                     target="_blank"
                     aria-label="Twitter"
-                  ></a>
+                    >
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa-brands fa-twitter fa-stack-1x"></i>
+                    </span>
+                  </a>
                 </li>
                 <li class="social-item">
                   <a
@@ -498,7 +523,11 @@
                     class="social-link social-link-gp"
                     target="_blank"
                     aria-label="Google Plus"
-                  ></a>
+                    >
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-google-plus-g fa-stack-1x"></i>
+                  </span></a>
                 </li>
                 <li class="social-item">
                   <a
@@ -506,7 +535,10 @@
                     class="social-link social-link-li"
                     target="_blank"
                     aria-label="LinkedIn"
-                  ></a>
+                    ><span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa-brands fa-linkedin-in fa-stack-1x"></i>
+                  </span></a>
                 </li>
               </ul>
             </div>
