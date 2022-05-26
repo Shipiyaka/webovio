@@ -672,7 +672,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 60vh;
+  padding-top: 250px;
 }
 
 .footer-top {
@@ -693,6 +693,11 @@ img {
   line-height: 40px;
   color: #ffffff;
   font-style: normal;
+  transition: all 0.1s;
+}
+
+.footer-contacts-info:hover {
+  text-decoration: underline;
 }
 
 .footer-container {
@@ -715,6 +720,12 @@ img {
 .footer-link {
   line-height: 40px;
   color: #b6c197;
+  transition: all 0.1s;
+}
+
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .footer-middle {
@@ -736,6 +747,11 @@ img {
   font-size: 24px;
   line-height: 38px;
   color: #ffffff;
+  transition: all 0.1s;
+}
+
+.footer-mail:hover {
+  text-decoration: underline;
 }
 
 .social {
@@ -751,6 +767,11 @@ img {
   color: #444a34;
   width: 33px;
   height: 33px;
+  transition: color 0.1s;
+}
+
+.social-item:hover .fa-circle {
+  color: #ffd723;
 }
 
 .fa-brands {
@@ -759,6 +780,11 @@ img {
   font-weight: 400;
   font-size: 18px;
   color: #5e6648;
+  transition: color 0.1s;
+}
+
+.social-item:hover .fa-brands {
+  color: #ffffff;
 }
 
 .footer-bottom {
