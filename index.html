@@ -34,11 +34,32 @@
         <a class="logo">
           <img src="static/images/logo.svg" alt="Webovio logo" />
         </a>
-        <button class="burger btn-reset" aria-label="Open menu">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-        </button>
+
+        <div class="burger">
+          <input type="checkbox" id="check-burger" autocomplete="off" />
+          <label for="check-burger">
+            <span class="burger-span">
+              <div class="burger-line first"></div>
+              <div class="burger-line second"></div>
+              <div class="burger-line third"></div>
+              <div class="burger-line fourth"></div>
+            </span>
+          </label>
+          <ul class="nav-top">
+            <li class="nav-top-element">
+              <a href="#about-us" class="nav-top-link">Services</a>
+            </li>
+            <li class="nav-top-element">
+              <a href="#project" class="nav-top-link">Contacts</a>
+            </li>
+            <li class="nav-top-element">
+              <a href="#proposal" class="nav-top-link">Info</a>
+            </li>
+            <li class="nav-top-element">
+              <a href="#get-started" class="nav-top-link">Let's get started</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -61,6 +82,36 @@
           </div>
         </div>
       </section>
+
+      <!-- <section class="get-started get-started-images">
+        <div class="get-started-container container">
+          <img
+            src="static/images/logo-1.png"
+            alt="Our client"
+            class="get-started-img"
+          />
+          <img
+            src="static/images/logo-2.png"
+            alt="Our client"
+            class="get-started-img"
+          />
+          <img
+            src="static/images/logo-3.png"
+            alt="Our client"
+            class="get-started-img"
+          />
+          <img
+            src="static/images/logo-4.png"
+            alt="Our client"
+            class="get-started-img"
+          />
+          <img
+            src="static/images/logo-5.png"
+            alt="Our client"
+            class="get-started-img"
+          />
+        </div>
+      </section> -->
 
       <section class="proposal">
         <div class="container">
@@ -125,7 +176,7 @@
       </section>
 
       <section class="get-started">
-        <div class="container">
+        <div class="get-started-container container">
           <h2 class="get-started-title">
             Let&rsquo;s make something amazing together.
           </h2>
@@ -149,9 +200,13 @@
             </div>
             <div class="footer-contacts-item">
               <p class="footer-contacts-text">Address</p>
-              <address class="footer-contacts-info">
+              <a
+                href="https://g.page/MerlinHeightsPrimaVidae?share"
+                class="footer-contacts-info"
+                target="_blank"
+              >
                 491 Merlin Crest Suite 963
-              </address>
+              </a>
             </div>
           </div>
 
@@ -342,35 +397,7 @@
         </div>
       </section>
 
-      <div class="hover-item hover-item-right">
-        <div class="hover-item-container">
-          <img
-            src="static/images/logo-1.png"
-            alt="Our client"
-            class="hover-item-img"
-          />
-          <img
-            src="static/images/logo-2.png"
-            alt="Our client"
-            class="hover-item-img"
-          />
-          <img
-            src="static/images/logo-3.png"
-            alt="Our client"
-            class="hover-item-img"
-          />
-          <img
-            src="static/images/logo-4.png"
-            alt="Our client"
-            class="hover-item-img"
-          />
-          <img
-            src="static/images/logo-5.png"
-            alt="Our client"
-            class="hover-item-img"
-          />
-        </div>
-      </div>
+      
 
       <section id="about-us">
         <div class="container">
